@@ -1,0 +1,52 @@
+// TECHNICAL MIXINS
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2');
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+// GLOBAL STYLES
+
+@import 'fonts';
+@import 'vars.scss';
+@import 'reset.scss';
+
+// ===== GENERAL ======
+
+body {
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.container {
+	max-width: $containerWidth;
+	width: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+
+	@media (max-width: 991px) {
+		padding: 0 10px;
+	}
+	@media (max-width: 575px) {
+		padding: 0 5px;
+	}
+}
+
+.btn {
+	display: inline-block;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	
+	&:focus {
+		outline: auto;
+	}
+}
+
+// @import 'yourfile.scss';
