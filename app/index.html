@@ -1,19 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Document</title>
-		<meta name="description" content="описание не длиннее 155 символов" />
-		<meta name="keywords" content="мета-теги, шаблон, html, css" />
+		<title>Завком Инжиниринг</title>
+		<meta name="description" content="Завком инжиниринг - мы строим объекты пищевой промышленности" />
+		<meta name="keywords" content="завком инжиниринг, пищевая промышленность" />
 
 		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 	<body>
-		@@include('_header.html')
-		<main class="main"></main>
+		@@include('_svg.html') @@include('_header.html')
+		<main class="main">
+			<section class="start">
+				<div class="start__swiper-container swiper-container">
+					<div class="start__swiper-wrapper swiper-wrapper">
+						<div class="start__swiper-slide swiper-slide">
+							<div class="start__item start__item--food">
+								<div class="start__img ibg">
+									<img src="img/start/slide-1.jpg" alt="Строительство объектов пищевой промышленности" />
+								</div>
+								<div class="start__container">
+									<div class="start__item-body">
+										<h2 class="start__title">Строительство объектов пищевой промышленности</h2>
+										<a href="#" class="btn start__btn">ознакомиться с проектами</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="start__swiper-slide swiper-slide">
+							<div class="start__item start__item--oil">
+								<div class="start__img ibg">
+									<img src="img/start/slide-2.jpg" alt="Строительство объектов нефтехимической промышленности" />
+								</div>
+								<div class="start__container">
+									<div class="start__item-body">
+										<h2 class="start__title">Строительство объектов нефтехимической промышленности</h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./start__swiper-wrapper -->
+
+					<div class="start__swiper-button-prev swiper-button-prev"></div>
+					<div class="start__swiper-button-next swiper-button-next"></div>
+
+					<div class="start__swiper-pagination swiper-pagination"></div>
+				</div>
+
+				<div class="start__pagination-btns btns-pagination">
+					<div class="container">
+						<div class="btns-pagination__body">
+							<div class="btns-pagination__item btns-pagination__item--bio">
+								<div class="btns-pagination__img">
+									<img src="img/bio-technologies.png" alt="Био технологии" />
+								</div>
+								<h3 class="btns-pagination__title">Био<br />технологии</h3>
+							</div>
+							<div class="btns-pagination__item btns-pagination__item--oil">
+								<div class="btns-pagination__img">
+									<img src="img/oil-technologies.png" alt="Нефтехимические технологии" />
+								</div>
+								<h3 class="btns-pagination__title">Нефтехимические<br />технологии</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="news">
+				<div class="container">
+					<h2 class="news__title">Новости</h2>
+					<div class="news__list">
+						<div class="news__swiper-container swiper-container">
+							<div class="news__swiper-wrapper swiper-wrapper">
+								<!-- Slides -->
+								<div class="news__swiper-slide swiper-slide">
+									<div class="news__item">
+										<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
+										<h3 class="news__item-title">Установка кристаллизации капролактама.</h3>
+										<p class="news__item-exсerpt">ООО «ЗАВКОМ—ИНЖИНИРИНГ» успешно завершило проект по поставке и пуско-наладке установки кристаллизации</p>
+										<a href="#" class="btn news__item-readmore">Подробнее ></a>
+									</div>
+								</div><!-- /news__swiper-slide -->
+								<div class="news__swiper-slide swiper-slide">
+									<div class="news__item">
+										<time class="news__item-date">22 МАРТА 2021 Г.</time>
+										<h3 class="news__item-title">Компания «ЗАВКОМ-ИНЖИНИРИНГ» стала победителем конкурса «Экспортер года 2020»</h3>
+										<p class="news__item-exсerpt">Ежегодный региональный конкурс «Экспортер года 2020» проводится в рамках Национального проекта «Малое и среднее...</p>
+										<a href="#" class="btn news__item-readmore">Подробнее ></a>
+									</div>
+								</div><!-- /news__swiper-slide -->
+								<div class="news__swiper-slide swiper-slide">
+									<div class="news__item">
+										<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
+										<h3 class="news__item-title">Коллектив ООО "ЗАВКОМ- ИНЖИНИРИНГ" поздравляет В. Н. Артемова с юбилеем!</h3>
+										<p class="news__item-exсerpt">13 марта свой день рождения отмечает Владимир Николаевич Артемов, генеральный директор ООО "Виват", являющегося</p>
+										<a href="#" class="btn news__item-readmore">Подробнее ></a>
+									</div>
+								</div><!-- /news__swiper-slide -->
+							</div><!-- /news_swiper-wrapper -->
+							<div class="news__swiper-pagination swiper-pagination"></div>
+						</div><!-- /news__swiper-container -->
+					</div><!-- /news__list -->
+				</div><!-- /container -->
+			</section>
+		</main>
 		@@include('_footer.html')
 
 		<script src="js/script.min.js"></script>
