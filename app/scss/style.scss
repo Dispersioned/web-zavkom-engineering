@@ -105,10 +105,19 @@ body {
 	height: 48px;
 }
 
+.title-section {
+	font-size: 40px;
+	line-height: 48 / 40 + em;
+	color: $red;
+	font-weight: 400;
+}
+
 @import 'swiper/swiper.scss';
 @import 'header.scss';
 @import 'burger.scss';
 @import 'start.scss';
 @import 'news.scss';
+@import 'numbers.scss';
+@import 'about.scss';
 // @import 'yourfile.scss';
 @import 'footer.scss';

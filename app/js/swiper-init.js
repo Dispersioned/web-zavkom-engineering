@@ -1,3 +1,5 @@
+// Start Swiper
+// =======================
 const startSwiper = new Swiper('.start__swiper-container', {
 	loop: true,
 	autoHeight: true,
@@ -13,6 +15,9 @@ const startSwiper = new Swiper('.start__swiper-container', {
 	},
 });
 
+// Start Swiper Nav Buttons
+// =======================
+
 const startBioBtn = document.querySelector('.btns-pagination__item--bio');
 const startOilBtn = document.querySelector('.btns-pagination__item--oil');
 const startNavBtnsBody = document.querySelector('.start__swiper-pagination');
@@ -25,31 +30,68 @@ startOilBtn.addEventListener('click', function (e) {
 	startNavBtnsBody.lastChild.click();
 });
 
-// News Swiper
+// Adaptive Swiper
+// =======================
 
-let newsSwiper;
+let newsSwiper, numbersSwiper;
 
 // breakpoint where swiper will be destroyed
-const NewsSwiperBreakpoint = window.matchMedia('(min-width: 990px)');
+const NewsSwiperBreakpoint = window.matchMedia('(min-width: 992px)');
+const NumbersSwiperBreakpoint = window.matchMedia('(min-width: 1200px)');
 
-const breakpointChecker = function () {
-	if (NewsSwiperBreakpoint.matches === true) {
+function breakpointChecker(breakpoint, sectionName) {
+	const swiper = {
+		sliderContainer: document.querySelector(`.${sectionName}__swiper-container`),
+		pagination: document.querySelector(`.${sectionName}__swiper-pagination`),
+		isInit: function () {
+			return this.sliderContainer.classList.contains('swiper-container-initialized');
+		},
+	};
+
+	if (breakpoint.matches === true) {
 		// clean up old instances and inline styles when available
-		let newsSliderContainer = document.querySelector('.news__swiper-container');
-		if (NewsSwiperBreakpoint !== undefined && newsSliderContainer.classList.contains('swiper-container-initialized')) {
-			newsSwiper.destroy();
-			let pagination = document.querySelector('.news__swiper-pagination');
-			while (pagination.firstChild) {
-				pagination.removeChild(pagination.firstChild);
+		if (breakpoint !== undefined && swiper.isInit()) {
+			console.log('swiper destroyed');
+			console.log(sectionName);
+			// newsSwiper.destroy();
+			destroySwiper(sectionName);
+
+			if (swiper.pagination) {
+				while (swiper.pagination.firstChild) {
+					swiper.pagination.removeChild(swiper.pagination.firstChild);
+				}
 			}
 		}
 		// or/and do nothing
 		return;
-	} else if (NewsSwiperBreakpoint.matches === false) {
+	} else if (breakpoint.matches === false) {
 		// fire small viewport version of swiper
-		return enableNewsSwiper();
+		return enableSwiper(sectionName);
 	}
-};
+}
+
+// Swiper init functions
+// =======================
+
+function enableSwiper(sectionName) {
+	if (sectionName == 'news') {
+		console.log('news init');
+		enableNewsSwiper();
+	}
+	if (sectionName == 'numbers') {
+		console.log('numbers init');
+		enableNumbersSwiper();
+	}
+}
+
+function destroySwiper(sectionName) {
+	if(sectionName == 'news') {
+		newsSwiper.destroy();
+	}
+	if(sectionName == 'numbers') {
+		numbersSwiper.destroy();
+	}
+}
 
 const enableNewsSwiper = function () {
 	newsSwiper = new Swiper('.news__swiper-container', {
@@ -74,10 +116,38 @@ const enableNewsSwiper = function () {
 	});
 };
 
-// keep an eye on viewport size changes
+const enableNumbersSwiper = function () {
+	numbersSwiper = new Swiper('.numbers__swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 35,
+		freeMode: true,
+
+		breakpoints: {
+			480: {
+				slidesPerView: 2.5,
+			},
+			768: {
+				slidesPerView: 3.5,
+			},
+		},
+
+		scrollbar: {
+			el: '.numbers__swiper-scrollbar',
+		},
+	});
+};
+
+// Resize listener
+// =======================
+
 NewsSwiperBreakpoint.addEventListener('change', function (e) {
-	breakpointChecker();
+	breakpointChecker(NewsSwiperBreakpoint, 'news');
+});
+
+NumbersSwiperBreakpoint.addEventListener('change', function (e) {
+	breakpointChecker(NumbersSwiperBreakpoint, 'numbers');
 });
 
 // kickstart
-breakpointChecker();
+breakpointChecker(NewsSwiperBreakpoint, 'news');
+breakpointChecker(NumbersSwiperBreakpoint, 'numbers');
