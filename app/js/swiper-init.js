@@ -51,8 +51,6 @@ function breakpointChecker(breakpoint, sectionName) {
 	if (breakpoint.matches === true) {
 		// clean up old instances and inline styles when available
 		if (breakpoint !== undefined && swiper.isInit()) {
-			console.log('swiper destroyed');
-			console.log(sectionName);
 			// newsSwiper.destroy();
 			destroySwiper(sectionName);
 
@@ -75,11 +73,9 @@ function breakpointChecker(breakpoint, sectionName) {
 
 function enableSwiper(sectionName) {
 	if (sectionName == 'news') {
-		console.log('news init');
 		enableNewsSwiper();
 	}
 	if (sectionName == 'numbers') {
-		console.log('numbers init');
 		enableNumbersSwiper();
 	}
 }

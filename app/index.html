@@ -12,202 +12,251 @@
 		<link rel="stylesheet" href="css/style.min.css" />
 	</head>
 	<body>
-		@@include('_svg.html') @@include('_header.html')
-		<main class="main">
-			<section class="start">
-				<div class="start__swiper-container swiper-container">
-					<div class="start__swiper-wrapper swiper-wrapper">
-						<div class="start__swiper-slide swiper-slide">
-							<div class="start__item start__item--food">
-								<div class="start__img ibg">
-									<img src="img/start/slide-1.jpg" alt="Строительство объектов пищевой промышленности" />
+		@@include('_svg.html')
+		<div class="wrapper">
+			@@include('_header.html')
+			<main class="main">
+				<section class="start">
+					<div class="start__swiper-container swiper-container">
+						<div class="start__swiper-wrapper swiper-wrapper">
+							<div class="start__swiper-slide swiper-slide">
+								<div class="start__item start__item--food">
+									<div class="start__img ibg">
+										<img src="img/start/slide-1.jpg" alt="Строительство объектов пищевой промышленности" />
+									</div>
+									<div class="start__container">
+										<div class="start__item-body">
+											<h2 class="start__title">Строительство объектов пищевой промышленности</h2>
+											<a href="#" class="btn start__btn">ознакомиться с проектами</a>
+										</div>
+									</div>
 								</div>
-								<div class="start__container">
-									<div class="start__item-body">
-										<h2 class="start__title">Строительство объектов пищевой промышленности</h2>
-										<a href="#" class="btn start__btn">ознакомиться с проектами</a>
+							</div>
+
+							<div class="start__swiper-slide swiper-slide">
+								<div class="start__item start__item--oil">
+									<div class="start__img ibg">
+										<img src="img/start/slide-2.jpg" alt="Строительство объектов нефтехимической промышленности" />
+									</div>
+									<div class="start__container">
+										<div class="start__item-body">
+											<h2 class="start__title">Строительство объектов нефтехимической промышленности</h2>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
+						<!-- ./start__swiper-wrapper -->
 
-						<div class="start__swiper-slide swiper-slide">
-							<div class="start__item start__item--oil">
-								<div class="start__img ibg">
-									<img src="img/start/slide-2.jpg" alt="Строительство объектов нефтехимической промышленности" />
-								</div>
-								<div class="start__container">
-									<div class="start__item-body">
-										<h2 class="start__title">Строительство объектов нефтехимической промышленности</h2>
+						<div class="start__swiper-button-prev swiper-button-prev"></div>
+						<div class="start__swiper-button-next swiper-button-next"></div>
+
+						<div class="start__swiper-pagination swiper-pagination"></div>
+					</div>
+
+					<div class="start__pagination-btns btns-pagination">
+						<div class="container">
+							<div class="btns-pagination__body">
+								<div class="btns-pagination__item btns-pagination__item--bio">
+									<div class="btns-pagination__img">
+										<img src="img/bio-technologies.png" alt="Био технологии" />
 									</div>
+									<h3 class="btns-pagination__title">Био<br />технологии</h3>
+								</div>
+								<div class="btns-pagination__item btns-pagination__item--oil">
+									<div class="btns-pagination__img">
+										<img src="img/oil-technologies.png" alt="Нефтехимические технологии" />
+									</div>
+									<h3 class="btns-pagination__title">Нефтехимические<br />технологии</h3>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- ./start__swiper-wrapper -->
+				</section>
 
-					<div class="start__swiper-button-prev swiper-button-prev"></div>
-					<div class="start__swiper-button-next swiper-button-next"></div>
-
-					<div class="start__swiper-pagination swiper-pagination"></div>
-				</div>
-
-				<div class="start__pagination-btns btns-pagination">
+				<section class="news">
 					<div class="container">
-						<div class="btns-pagination__body">
-							<div class="btns-pagination__item btns-pagination__item--bio">
-								<div class="btns-pagination__img">
-									<img src="img/bio-technologies.png" alt="Био технологии" />
-								</div>
-								<h3 class="btns-pagination__title">Био<br />технологии</h3>
-							</div>
-							<div class="btns-pagination__item btns-pagination__item--oil">
-								<div class="btns-pagination__img">
-									<img src="img/oil-technologies.png" alt="Нефтехимические технологии" />
-								</div>
-								<h3 class="btns-pagination__title">Нефтехимические<br />технологии</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="news">
-				<div class="container">
-					<h2 class="news__title title-section">Новости</h2>
-					<div class="news__list">
-						<div class="news__swiper-container swiper-container">
-							<div class="news__swiper-wrapper swiper-wrapper">
-								<!-- Slides -->
-								<div class="news__swiper-slide swiper-slide">
-									<div class="news__item">
-										<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
-										<h3 class="news__item-title">Установка кристаллизации капролактама.</h3>
-										<p class="news__item-exсerpt">ООО «ЗАВКОМ—ИНЖИНИРИНГ» успешно завершило проект по поставке и пуско-наладке установки кристаллизации</p>
-										<a href="#" class="btn news__item-readmore">Подробнее ></a>
-									</div>
-								</div>
-								<!-- /news__swiper-slide -->
-								<div class="news__swiper-slide swiper-slide">
-									<div class="news__item">
-										<time class="news__item-date">22 МАРТА 2021 Г.</time>
-										<h3 class="news__item-title">Компания «ЗАВКОМ-ИНЖИНИРИНГ» стала победителем конкурса «Экспортер года 2020»</h3>
-										<p class="news__item-exсerpt">Ежегодный региональный конкурс «Экспортер года 2020» проводится в рамках Национального проекта «Малое и среднее...</p>
-										<a href="#" class="btn news__item-readmore">Подробнее ></a>
-									</div>
-								</div>
-								<!-- /news__swiper-slide -->
-								<div class="news__swiper-slide swiper-slide">
-									<div class="news__item">
-										<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
-										<h3 class="news__item-title">Коллектив ООО "ЗАВКОМ-ИНЖИНИРИНГ" поздравляет В. Н. Артемова с юбилеем!</h3>
-										<p class="news__item-exсerpt">13 марта свой день рождения отмечает Владимир Николаевич Артемов, генеральный директор ООО "Виват", являющегося...</p>
-										<a href="#" class="btn news__item-readmore">Подробнее ></a>
-									</div>
-								</div>
-								<!-- /news__swiper-slide -->
-							</div>
-							<!-- /news_swiper-wrapper -->
-							<div class="news__swiper-pagination swiper-pagination"></div>
-						</div>
-						<!-- /news__swiper-container -->
-					</div>
-					<!-- /news__list -->
-				</div>
-				<!-- /container -->
-			</section>
-
-			<section class="numbers">
-				<div class="container">
-					<div class="numbers__body">
-						<h2 class="numbers__title">О нас в цифрах</h2>
-						<div class="numbers__slider">
-							<!-- Slider main container -->
-							<div class="numbers__swiper-container swiper-container">
-								<!-- Additional required wrapper -->
-								<div class="numbers__swiper-wrapper swiper-wrapper">
+						<h2 class="news__title title-section">Новости</h2>
+						<div class="news__list">
+							<div class="news__swiper-container swiper-container">
+								<div class="news__swiper-wrapper swiper-wrapper">
 									<!-- Slides -->
-									<div class="numbers__item numbers__swiper-slide swiper-slide">
-										<div class="numbers__item-img">
-											<img src="img/numbers/numbers-1.svg" alt="100 сотрудников" />
+									<div class="news__swiper-slide swiper-slide">
+										<div class="news__item">
+											<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
+											<h3 class="news__item-title">Установка кристаллизации капролактама.</h3>
+											<p class="news__item-exсerpt">ООО «ЗАВКОМ—ИНЖИНИРИНГ» успешно завершило проект по поставке и пуско-наладке установки кристаллизации</p>
+											<a href="#" class="btn news__item-readmore">Подробнее ></a>
 										</div>
-										<h3 class="numbers__item-title">100 сотрудников</h3>
-										<p class="numbers__item-text">Более 100 высоко- квалифицированных специалистов в штате</p>
 									</div>
-									<!-- /numbers__item -->
-
-									<div class="numbers__item numbers__swiper-slide swiper-slide">
-										<div class="numbers__item-img">
-											<img src="img/numbers/numbers-2.svg" alt="8 100 единиц" />
+									<!-- /news__swiper-slide -->
+									<div class="news__swiper-slide swiper-slide">
+										<div class="news__item">
+											<time class="news__item-date">22 МАРТА 2021 Г.</time>
+											<h3 class="news__item-title">Компания «ЗАВКОМ-ИНЖИНИРИНГ» стала победителем конкурса «Экспортер года 2020»</h3>
+											<p class="news__item-exсerpt">Ежегодный региональный конкурс «Экспортер года 2020» проводится в рамках Национального проекта «Малое и среднее...</p>
+											<a href="#" class="btn news__item-readmore">Подробнее ></a>
 										</div>
-										<h3 class="numbers__item-title">8&nbsp;100 единиц</h3>
-										<p class="numbers__item-text">единиц оборудования было разработано и поставлено</p>
 									</div>
-									<!-- /numbers__item -->
-
-									<div class="numbers__item numbers__swiper-slide swiper-slide">
-										<div class="numbers__item-img">
-											<img src="img/numbers/numbers-3.svg" alt="60 установок" />
+									<!-- /news__swiper-slide -->
+									<div class="news__swiper-slide swiper-slide">
+										<div class="news__item">
+											<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
+											<h3 class="news__item-title">Коллектив ООО "ЗАВКОМ-ИНЖИНИРИНГ" поздравляет В. Н. Артемова с юбилеем!</h3>
+											<p class="news__item-exсerpt">13 марта свой день рождения отмечает Владимир Николаевич Артемов, генеральный директор ООО "Виват", являющегося...</p>
+											<a href="#" class="btn news__item-readmore">Подробнее ></a>
 										</div>
-										<h3 class="numbers__item-title">60 установок</h3>
-										<p class="numbers__item-text">промышленных установок и заводов было поставлено "под ключ"</p>
 									</div>
-									<!-- /numbers__item -->
-
-									<div class="numbers__item numbers__swiper-slide swiper-slide">
-										<div class="numbers__item-img">
-											<img src="img/numbers/numbers-4.svg" alt="300 клиентов" />
-										</div>
-										<h3 class="numbers__item-title">300 клиентов</h3>
-										<p class="numbers__item-text">Успешное взаимодействие с более чем 300 клиентами</p>
-									</div>
-									<!-- /numbers__item -->
-
-									<div class="numbers__item numbers__swiper-slide swiper-slide">
-										<div class="numbers__item-img">
-											<img src="img/numbers/numbers-5.svg" alt="Экспортер года 2020" />
-										</div>
-										<h3 class="numbers__item-title">Экспортер года 2020</h3>
-										<p class="numbers__item-text">Победитель конкурса "Экспортер года 2020"</p>
-									</div>
-									<!-- /numbers__item -->
+									<!-- /news__swiper-slide -->
 								</div>
-								<!-- /numbers__swiper-wrapper -->
-								<div class="numbers__swiper-scrollbar swiper-scrollbar"></div>
+								<!-- /news_swiper-wrapper -->
+								<div class="news__swiper-pagination swiper-pagination"></div>
+							</div>
+							<!-- /news__swiper-container -->
+						</div>
+						<!-- /news__list -->
+					</div>
+					<!-- /container -->
+				</section>
+
+				<section class="numbers">
+					<div class="container">
+						<div class="numbers__body">
+							<h2 class="numbers__title">О нас в цифрах</h2>
+							<div class="numbers__slider">
+								<!-- Slider main container -->
+								<div class="numbers__swiper-container swiper-container">
+									<!-- Additional required wrapper -->
+									<div class="numbers__swiper-wrapper swiper-wrapper">
+										<!-- Slides -->
+										<div class="numbers__item numbers__swiper-slide swiper-slide">
+											<div class="numbers__item-img">
+												<img src="img/numbers/numbers-1.svg" alt="100 сотрудников" />
+											</div>
+											<h3 class="numbers__item-title">100 сотрудников</h3>
+											<p class="numbers__item-text">Более 100 высоко- квалифицированных специалистов в штате</p>
+										</div>
+										<!-- /numbers__item -->
+
+										<div class="numbers__item numbers__swiper-slide swiper-slide">
+											<div class="numbers__item-img">
+												<img src="img/numbers/numbers-2.svg" alt="8 100 единиц" />
+											</div>
+											<h3 class="numbers__item-title">8&nbsp;100 единиц</h3>
+											<p class="numbers__item-text">единиц оборудования было разработано и поставлено</p>
+										</div>
+										<!-- /numbers__item -->
+
+										<div class="numbers__item numbers__swiper-slide swiper-slide">
+											<div class="numbers__item-img">
+												<img src="img/numbers/numbers-3.svg" alt="60 установок" />
+											</div>
+											<h3 class="numbers__item-title">60 установок</h3>
+											<p class="numbers__item-text">промышленных установок и заводов было поставлено "под ключ"</p>
+										</div>
+										<!-- /numbers__item -->
+
+										<div class="numbers__item numbers__swiper-slide swiper-slide">
+											<div class="numbers__item-img">
+												<img src="img/numbers/numbers-4.svg" alt="300 клиентов" />
+											</div>
+											<h3 class="numbers__item-title">300 клиентов</h3>
+											<p class="numbers__item-text">Успешное взаимодействие с более чем 300 клиентами</p>
+										</div>
+										<!-- /numbers__item -->
+
+										<div class="numbers__item numbers__swiper-slide swiper-slide">
+											<div class="numbers__item-img">
+												<img src="img/numbers/numbers-5.svg" alt="Экспортер года 2020" />
+											</div>
+											<h3 class="numbers__item-title">Экспортер года 2020</h3>
+											<p class="numbers__item-text">Победитель конкурса "Экспортер года 2020"</p>
+										</div>
+										<!-- /numbers__item -->
+									</div>
+									<!-- /numbers__swiper-wrapper -->
+									<div class="numbers__swiper-scrollbar swiper-scrollbar"></div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
-			<section class="about">
-				<div class="container">
-					<div class="about__body">
-						<h2 class="about__title title-section">О компании</h2>
-						<div class="about__content">
-							<div class="about__item">
-								<img src="img/about/about-1.jpg" alt="Завком инжиниринг" class="about__item-img">
-								<div class="about__item-description">
-									<p class="about__item-text">ЗАВКОМ-ИНЖИНИРИНГ&nbsp;&mdash; ведущая российская инжиниринговая компания, основанная в&nbsp;2014&nbsp;году. Компания осуществляет строительство объектов нефтехимической, биотехнологической и&nbsp;пищевой промышленности.</p>
-									<p class="about__item-text">Владимир Николаевич Артемов&nbsp;&mdash; владелец АО&nbsp;&laquo;Тамбовский завод &bdquo;Комсомолец&ldquo; им. Н.С. Артемова&raquo; www.zavkom.com принял решение создать предприятие, предоставляющее весь комплекс инжиниринговых услуг, включая предпроектные работы, генеральное проектирование, поставку оборудования, монтажные работы, автоматизацию производства, шеф-монтаж, пуско-наладочные работы.</p>
-									<p class="about__item-text">Часть специалистов завода &laquo;Комсомолец&raquo;, который ведет свою историю с&nbsp;1933&nbsp;года, с&nbsp;колоссальным инженерным опытом, перешли в&nbsp;компанию ЗАВКОМ-ИНЖИНИРИНГ.</p>
+				<section class="about">
+					<div class="container">
+						<div class="about__body">
+							<h2 class="about__title title-section">О компании</h2>
+							<div class="about__content">
+								<div class="about__item">
+									<img src="img/about/about-1.jpg" alt="Завком инжиниринг" class="about__item-img" />
+									<div class="about__item-description">
+										<p class="about__item-text">ЗАВКОМ-ИНЖИНИРИНГ&nbsp;&mdash; ведущая российская инжиниринговая компания, основанная в&nbsp;2014&nbsp;году. Компания осуществляет строительство объектов нефтехимической, биотехнологической и&nbsp;пищевой промышленности.</p>
+										<p class="about__item-text">Владимир Николаевич Артемов&nbsp;&mdash; владелец АО&nbsp;&laquo;Тамбовский завод &bdquo;Комсомолец&ldquo; им. Н.С. Артемова&raquo; www.zavkom.com принял решение создать предприятие, предоставляющее весь комплекс инжиниринговых услуг, включая предпроектные работы, генеральное проектирование, поставку оборудования, монтажные работы, автоматизацию производства, шеф-монтаж, пуско-наладочные работы.</p>
+										<p class="about__item-text">Часть специалистов завода &laquo;Комсомолец&raquo;, который ведет свою историю с&nbsp;1933&nbsp;года, с&nbsp;колоссальным инженерным опытом, перешли в&nbsp;компанию ЗАВКОМ-ИНЖИНИРИНГ.</p>
+									</div>
 								</div>
-							</div><!-- /about__item -->
+								<!-- /about__item -->
 
-							<div class="about__item">
-								<img src="img/about/about-2.jpg" alt="Завком инжиниринг" class="about__item-img">
-								<div class="about__item-description">
-									<p class="about__item-text">Основная часть поставляемого оборудования производится на&nbsp;мощностях завода &laquo;Комсомолец&raquo;. Это позволяет при реализации проектов сократить объем инвестиционных затрат Заказчика за&nbsp;счет оптимизации стоимости технологического оборудования и&nbsp;ускорить процесс реализации проекта за&nbsp;счет минимизации времени согласования конструкторской документации.</p>
-									<p class="about__item-text">ЗАВКОМ-ИНЖИНИРИНГ сотрудничает с&nbsp;компаниями Европы, Китая, Индии и&nbsp;США. Центральный офис компании расположен в&nbsp;городе Тамбов. Свои представительства компания имеет в&nbsp;Москве и&nbsp;Китае.</p>
-									<p class="about__item-text">Важной вехой в&nbsp;истории компании стало создание совместного предприятия с&nbsp;китайской корпорацией Cofco www.cofcowx.com с&nbsp;целью трансфера технологии переработки зерна в&nbsp;Россию. Китайская корпорация Cofco входит в&nbsp;список 500 крупнейших компаний мира и&nbsp;возглавляет топ-100 продовольственных предприятий Китая.</p>
+								<div class="about__item">
+									<img src="img/about/about-2.jpg" alt="Завком инжиниринг" class="about__item-img" />
+									<div class="about__item-description">
+										<p class="about__item-text">Основная часть поставляемого оборудования производится на&nbsp;мощностях завода &laquo;Комсомолец&raquo;. Это позволяет при реализации проектов сократить объем инвестиционных затрат Заказчика за&nbsp;счет оптимизации стоимости технологического оборудования и&nbsp;ускорить процесс реализации проекта за&nbsp;счет минимизации времени согласования конструкторской документации.</p>
+										<p class="about__item-text">ЗАВКОМ-ИНЖИНИРИНГ сотрудничает с&nbsp;компаниями Европы, Китая, Индии и&nbsp;США. Центральный офис компании расположен в&nbsp;городе Тамбов. Свои представительства компания имеет в&nbsp;Москве и&nbsp;Китае.</p>
+										<p class="about__item-text">Важной вехой в&nbsp;истории компании стало создание совместного предприятия с&nbsp;китайской корпорацией Cofco www.cofcowx.com с&nbsp;целью трансфера технологии переработки зерна в&nbsp;Россию. Китайская корпорация Cofco входит в&nbsp;список 500 крупнейших компаний мира и&nbsp;возглавляет топ-100 продовольственных предприятий Китая.</p>
+									</div>
 								</div>
-							</div><!-- /about__item -->
-						</div><!-- /about__content -->
-					</div><!-- /about__body -->
-				</div><!-- /container -->
-			</section>
-		</main>
-		@@include('_footer.html')
+								<!-- /about__item -->
+							</div>
+							<!-- /about__content -->
+						</div>
+						<!-- /about__body -->
+					</div>
+					<!-- /container -->
+				</section>
+
+				<section class="map">
+					<div class="container">
+						<div class="map__body">
+							<h2 class="map__title title-section">Как нас найти</h2>
+							<div class="map__content">
+								<div class="map__yandex-map">
+									<div class="map__yandex-map-body">
+										<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A92d626fc939c78568388c2b5dd2e52b6b5879f064697e1adb2cae376f9a14bd0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+									</div>
+								</div>
+								<div class="map__info info-map">
+									<address class="info-map__address">392000, Российская Федерация, г.&nbsp;Тамбов, ул.&nbsp;Советская, д.&nbsp;51, оф.&nbsp;319</address>
+									<div class="info-map__tels">
+										<a href="tel:74752793722" class="info-map__tel">+7 (4752) 79-37-22</a>
+										<a href="tel:74752703525" class="info-map__tel">+7 (4752) 70-35-25</a>
+									</div>
+									<div class="info-map__mail">
+										<a href="mailto:office@zavkomepc.com" class="info-map__mail-link">office@zavkomepc.com</a>
+										<div class="info-map__mail-text">Официальная почта компании</div>
+									</div>
+									<div class="info-map__mail">
+										<a href="mailto:911@zavkomepc.com" class="info-map__mail-link">911@zavkomepc.com </a>
+										<div class="info-map__mail-text">Служба контроля качества обслуживания клиентов</div>
+									</div>
+									<div class="info-map__worktime">
+										ПН-ПТ с 8.30 до 17.30<br />
+										Перерыв с 12.30 до 13.30<br />
+										СБ-ВС - выходные
+									</div>
+								</div>
+							</div>
+							<!-- /.map__content -->
+						</div>
+						<!-- /.map__body -->
+					</div>
+					<!-- /.container -->
+				</section>
+			</main>
+			@@include('_footer.html')
+		</div>
+		<!-- /.wrapper -->
+
+		<div class="scroll-to-top"></div>
 
 		<script src="js/script.min.js"></script>
 	</body>
