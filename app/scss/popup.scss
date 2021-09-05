@@ -13,7 +13,7 @@
 	opacity: 0;
 	visibility: hidden;
 
-	z-index: 10020;
+	z-index: 1001;
 
 	&.open {
 		opacity: 1;
@@ -42,7 +42,7 @@
 		text-transform: uppercase;
 
 		transition: all 0.3s ease;
-		z-index: 10010;
+		z-index: 1000;
 
 		@media (min-width: 991px) {
 			&:hover {
