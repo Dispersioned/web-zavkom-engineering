@@ -118,6 +118,15 @@ body {
 	z-index: 1000;
 }
 
+.fixed-elements {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+}
+
 @import 'swiper/swiper.scss';
 @import 'header.scss';
 @import 'burger.scss';
@@ -126,6 +135,7 @@ body {
 @import 'numbers.scss';
 @import 'about.scss';
 @import 'map.scss';
+@import 'popup.scss';
 // @import 'yourfile.scss';
 @import 'footer.scss';
 
@@ -138,7 +148,15 @@ body {
 	height: 75px;
 	background: url('../img/icons/scroll-to-top.svg') no-repeat 0 0 / cover;
 	cursor: pointer;
+	transition: all 0.3s ease;
+
 	z-index: 10000;
+
+	@media (min-width: 991px) {
+		&:hover {
+			filter: contrast(130%);
+		}
+	}
 
 	@media (max-width: 767px) {
 		width: 50px;

@@ -5,3 +5,4 @@
 @@include('burger.js');
 @@include('scroll-to-top.js');
 @@include('spoiler.js');
+@@include('popup.js');

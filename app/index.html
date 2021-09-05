@@ -253,10 +253,65 @@
 				</section>
 			</main>
 			@@include('_footer.html')
+
+			<div class="scroll-to-top lock-padding"></div>
+
+			<a href="#popup-question" class="popup-question__btn popup-link lock-padding">Задать вопрос</a>
+			<div id="popup-question" class="popup-question popup">
+				<div class="popup-question__body">
+					<div class="popup-question__content">
+						<a href="#header" class="popup-question__close close-popup"></a>
+						<h2 class="popup-question__title">Задать вопрос</h2>
+						<form action="#" class="popup-question__form form-question">
+							<label class="form-question__input">
+								<input type="text" name="username" placeholder="#" />
+								<span>Ваше имя</span> </label
+							><!-- /.form-question__input -->
+							<label class="form-question__input">
+								<input type="email" name="email" placeholder="#" />
+								<span>Ваш e-mail</span> </label
+							><!-- /.form-question__input -->
+							<label class="form-question__input">
+								<input type="tel" name="number" placeholder="#" />
+								<span>Ваш телефон</span> </label
+							><!-- /.form-question__input -->
+
+							<label class="form-question__input">
+								<div class="select">
+									<div class="select__header">
+										<div class="select__current">Выберите направление</div>
+										<div class="select__icon"></div>
+									</div>
+									<!-- /.select__header -->
+									<div class="select__body">
+										<div class="select__item">Био технологии</div>
+										<div class="select__item">Нефтехимические технологии</div>
+									</div>
+									<!-- /.select__body -->
+								</div>
+								<!-- <span>Выберите направление</span> --> </label
+							><!-- /.form-question__input -->
+
+							<label class="form-question__input">
+								<input type="text" name="question" placeholder="#" />
+								<span>Ваш вопрос</span> </label
+							><!-- /.form-question__input -->
+
+							<button type="submit" class="form-question__btn btn">Задать вопрос</button>
+						</form>
+						<!-- /.form-question -->
+						<p class="popup-question__info">
+							Нажимая на кнопку, вы соглашаетесь с
+							<a href="#" class="popup-question__info-link">политикой конфиденциальности</a>
+						</p>
+					</div>
+					<!-- /.popup-question__content -->
+				</div>
+				<!-- /.popup-question__body -->
+			</div>
+			<!-- /.popup-question -->
 		</div>
 		<!-- /.wrapper -->
-
-		<div class="scroll-to-top"></div>
 
 		<script src="js/script.min.js"></script>
 	</body>
