@@ -1787,6 +1787,20 @@ button.swiper-pagination-bullet {
 .map__yandex-map {
   position: relative;
   min-height: 500px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.map__yandex-map::before {
+  content: url("../img/icons/loading.svg");
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 118px;
+  height: 118px;
 }
 
 .map__yandex-map-body {
