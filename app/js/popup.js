@@ -88,7 +88,6 @@ const popup = function () {
 					setTimeout(() => {
 						// IE9 polyfill
 						if (el.style.removeProperty) {
-							console.log(true);
 							el.style.removeProperty('transition-property');
 							el.style.removeProperty('transition-duration');
 						} else {

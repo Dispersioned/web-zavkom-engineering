@@ -92,7 +92,7 @@
 									<!-- Slides -->
 									<div class="news__swiper-slide swiper-slide">
 										<div class="news__item">
-											<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
+											<span class="news__item-date">12 АПРЕЛЯ 2021 Г.</span>
 											<h3 class="news__item-title">Установка кристаллизации капролактама.</h3>
 											<p class="news__item-exсerpt">ООО «ЗАВКОМ—ИНЖИНИРИНГ» успешно завершило проект по поставке и пуско-наладке установки кристаллизации</p>
 											<a href="#" class="btn news__item-readmore">Подробнее ></a>
@@ -101,7 +101,7 @@
 									<!-- /news__swiper-slide -->
 									<div class="news__swiper-slide swiper-slide">
 										<div class="news__item">
-											<time class="news__item-date">22 МАРТА 2021 Г.</time>
+											<span class="news__item-date">22 МАРТА 2021 Г.</span>
 											<h3 class="news__item-title">Компания «ЗАВКОМ-ИНЖИНИРИНГ» стала победителем конкурса «Экспортер года 2020»</h3>
 											<p class="news__item-exсerpt">Ежегодный региональный конкурс «Экспортер года 2020» проводится в рамках Национального проекта «Малое и среднее...</p>
 											<a href="#" class="btn news__item-readmore">Подробнее ></a>
@@ -110,7 +110,7 @@
 									<!-- /news__swiper-slide -->
 									<div class="news__swiper-slide swiper-slide">
 										<div class="news__item">
-											<time class="news__item-date">12 АПРЕЛЯ 2021 Г.</time>
+											<span class="news__item-date">12 АПРЕЛЯ 2021 Г.</span>
 											<h3 class="news__item-title">Коллектив ООО "ЗАВКОМ-ИНЖИНИРИНГ" поздравляет В. Н. Артемова с юбилеем!</h3>
 											<p class="news__item-exсerpt">13 марта свой день рождения отмечает Владимир Николаевич Артемов, генеральный директор ООО "Виват", являющегося...</p>
 											<a href="#" class="btn news__item-readmore">Подробнее ></a>
@@ -229,9 +229,7 @@
 							<h2 class="map__title title-section">Как нас найти</h2>
 							<div class="map__content">
 								<div class="map__yandex-map">
-									<div class="map__yandex-map-body">
-										<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A92d626fc939c78568388c2b5dd2e52b6b5879f064697e1adb2cae376f9a14bd0&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
-									</div>
+									<div class="map__yandex-map-body" id="map"></div>
 								</div>
 								<div class="map__info info-map">
 									<address class="info-map__address">392000, Российская Федерация, г.&nbsp;Тамбов, ул.&nbsp;Советская, д.&nbsp;51, оф.&nbsp;319</address>
@@ -285,7 +283,7 @@
 								<span>Ваш телефон</span> </label
 							><!-- /.form-question__input -->
 
-							<label class="form-question__input">
+							<div class="form-question__input">
 								<div class="select">
 									<div class="select__header">
 										<div class="select__current">Выберите направление</div>
@@ -298,8 +296,9 @@
 									</div>
 									<!-- /.select__body -->
 								</div>
-								<!-- <span>Выберите направление</span> --> </label
-							><!-- /.form-question__input -->
+								<!-- <span>Выберите направление</span> -->
+							</div>
+							<!-- /.form-question__input -->
 
 							<label class="form-question__input">
 								<input type="text" name="question" placeholder="#" />
@@ -323,5 +322,68 @@
 		<!-- /.wrapper -->
 
 		<script src="js/script.min.js"></script>
+		<script>
+			const mapContainer = document.getElementById('map');
+			const observerOptions = {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.1,
+			};
+
+			let isMapLoaded = false;
+			function loadMap(entries, observer) {
+				entries.forEach((element) => {
+					// load api and map once
+					if (!isMapLoaded && element.intersectionRatio > 0) {
+						// load ymap api and init map afterwards
+						const ymapApi = document.createElement('script');
+						ymapApi.type = 'text/javascript';
+						ymapApi.src = 'https://api-maps.yandex.ru/2.1/?apikey=3f091845-aa8c-4de3-b5c8-3fcdc9e362e0&lang=ru_RU&onload=initMap';
+						document.getElementsByTagName('body')[0].appendChild(ymapApi);
+						isMapLoaded = true;
+					}
+				});
+			}
+
+			const observer = new IntersectionObserver(loadMap, observerOptions);
+			observer.observe(mapContainer);
+
+			function initMap() {
+				var myMap = new ymaps.Map(
+						'map',
+						{
+							center: [52.712578, 41.462847],
+							zoom: 17,
+						},
+						{
+							searchControlProvider: 'yandex#search',
+						}
+					),
+					// Создаем геообъект с типом геометрии "Точка".
+					myGeoObject = new ymaps.GeoObject(
+						{
+							// Описание геометрии.
+							geometry: {
+								type: 'Point',
+								coordinates: [52.712578, 41.462847],
+							},
+							// Свойства.
+							properties: {
+								// Контент метки.
+								iconContent: 'Советская улица, 51',
+							},
+						},
+						{
+							// Опции.
+							// Иконка метки будет растягиваться под размер ее содержимого.
+							preset: 'islands#redStretchyIcon',
+							// Метку можно перемещать.
+							draggable: false,
+						}
+					);
+
+				myMap.geoObjects.add(myGeoObject);
+			}
+		</script>
 	</body>
 </html>

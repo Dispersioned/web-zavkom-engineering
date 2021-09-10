@@ -47,8 +47,22 @@
 		position: relative;
 		min-height: 500px;
 
+		background: rgba(0, 0, 0, .1);
+
 		@media (max-width: 767px) {
 			min-height: 350px;
+		}
+
+		// loading gif
+		&::before {
+			content: url('../img/icons/loading.svg');
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			display: block;
+			transform: translate(-50%, -50%);
+			width: 118px;
+			height: 118px;
 		}
 	}
 
@@ -136,7 +150,7 @@
 		color: inherit;
 
 		@media (min-width: 991px) {
-		&:hover {
+			&:hover {
 				text-decoration: underline;
 			}
 		}
@@ -167,7 +181,7 @@
 		text-decoration: underline;
 
 		@media (min-width: 991px) {
-		&:hover {
+			&:hover {
 				text-decoration: none;
 			}
 		}
